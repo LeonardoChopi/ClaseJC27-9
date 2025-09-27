@@ -171,8 +171,11 @@ app.get('/jugadorNIVEL/:nivel', (req, res) => {
 
 
 //Metodo POST
-app.post('/agreele/:elementos', (req, res) => {
-    const elementos = req.body;
+app.post('/agreele/elementos', (req, res) => {
+    const { id, nombre, juego, nivel, pais } = req.body;
+
+    jugadores.push({id: parseInt(id), nombre: (nombre), juego: (juego), nivel: (nivel), pais: (nivel)})
+    
     res.json(elementos)
     
     // jugadores.push(elemento);  
